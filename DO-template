@@ -505,9 +505,65 @@
   },
 
   "Outputs" : {
-    "URL" : {
-      "Value" : { "Fn::Join" : [ "", ["http://", { "Fn::GetAtt" : ["GitInstance", "PublicIp"] }]]},
-      "Description" : "Newly created application URL"
+   "GitInstanceId" : {
+      "Description" : "GitHub instance ID",
+      "Value" : { "Ref" : "GitInstance" }
+    },
+    
+   "JenkinsOCInstanceId" : {
+      "Description" : "Jenkins Operationals centre instance ID",
+      "Value" : { "Ref" : "JenkinsOCInstance" }
+    },
+    
+   "JenkinsMasterInstanceId" : {
+      "Description" : "Jenkins Master instance ID",
+      "Value" : { "Ref" : "JenkinsMaster" }
+    },
+ 
+    "JenkinsSlaveInstanceId" : {
+      "Description" : "Jenkins Slave instance ID",
+      "Value" : { "Ref" : "JenkinsSlave" }
+    },   
+
+    "SeleniumInstanceId" : {
+      "Description" : "Selenium Server instance ID",
+      "Value" : { "Ref" : "SeleniumServer" }
+    },  
+
+    "PupperEnterpriseInstanceId" : {
+      "Description" : "Puppet Enterprise instance ID",
+      "Value" : { "Ref" : "PuppetEnterprise" }
+    }, 
+    
+    "SonarInstanceId" : {
+      "Description" : "Sonar instance ID",
+      "Value" : { "Ref" : "Sonar" }
+    },
+    
+    "NexusRPMInstanceId" : {
+      "Description" : "Nexus Repository Manager instance ID",
+      "Value" : { "Ref" : "NexusRPM" }
+    },  
+
+    "NexusIQInstanceId" : {
+      "Description" : "Nexus IQ instance ID",
+      "Value" : { "Ref" : "NexusIQ" }
+    },  
+
+    "ELKInstanceId" : {
+      "Description" : "ELK stack instance ID",
+      "Value" : { "Ref" : "ELK" }
+    },  
+
+    "ConsoleInstanceId" : {
+      "Description" : "Console instance ID",
+      "Value" : { "Ref" : "Console" }
+    },  
+
+    "DashboardInstanceId" : {
+      "Description" : "Dashboard instance ID",
+      "Value" : { "Ref" : "Dashboard" }
     }
+
   }
 }
