@@ -184,6 +184,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch", "r3.large", "Arch" ] } ] },
         "InstanceType" : "r3.large",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "80" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -203,6 +209,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.medium", "Arch" ] } ] },
         "InstanceType" : "t2.medium",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "50" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Jenkins Operations Centre" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -222,6 +234,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.medium", "Arch" ] } ] },
         "InstanceType" : "t2.medium",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "50" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Jenkins Master" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -241,6 +259,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.small", "Arch" ] } ] },
         "InstanceType" : "t2.small",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "10" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Jenkins Slave" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -261,6 +285,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.medium", "Arch" ] } ] },
         "InstanceType" : "t2.medium",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "30" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Selenium Server" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -280,6 +310,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.large", "Arch" ] } ] },
         "InstanceType" : "t2.large",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "30" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Puppet Enterprise" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -299,6 +335,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.micro", "Arch" ] } ] },
         "InstanceType" : "t2.micro",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "30" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Sonar" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -318,6 +360,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.medium", "Arch" ] } ] },
         "InstanceType" : "t2.medium",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "30" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Nexus Repository Manager" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -337,6 +385,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.medium", "Arch" ] } ] },
         "InstanceType" : "t2.medium",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "30" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Nexus IQ" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -356,6 +410,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.medium", "Arch" ] } ] },
         "InstanceType" : "t2.medium",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "100" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "ELK cluster" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -375,6 +435,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.small", "Arch" ] } ] },
         "InstanceType" : "t2.small",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "10" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Console" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -394,6 +460,12 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.medium", "Arch" ] } ] },
         "InstanceType" : "t2.medium",
         "KeyName" : { "Ref" : "KeyName" },
+        "BlockDeviceMappings" : [
+          {
+            "DeviceName" : "/dev/sda1",
+            "Ebs" : { "VolumeSize" : "10" } 
+          }
+        ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Dashboard" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
@@ -408,7 +480,7 @@
     "SonarDB" : {
       "Type" : "AWS::RDS::DBInstance",
       "Properties" : {
-        "AllocatedStorage" : "100",
+        "AllocatedStorage" : "20",
         "DBInstanceClass" : "db.t2.small",
         "Port" : "1433",
         "Engine" : "sqlserver-ex",
