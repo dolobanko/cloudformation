@@ -167,6 +167,7 @@
       "Type" : "AWS::EC2::SecurityGroup",
       "Properties" : {
         "VpcId" : { "Ref" : "VPC" },
+        "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} }  ],
         "GroupDescription" : "Allow All",
         "SecurityGroupIngress" : [
           {"IpProtocol" : "tcp", "FromPort" : "0", "ToPort" : "65535", "CidrIp" : "0.0.0.0/0"},
@@ -183,7 +184,7 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch", "r3.large", "Arch" ] } ] },
         "InstanceType" : "r3.large",
         "KeyName" : { "Ref" : "KeyName" },
-        "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Jenkins Master" } ],
+        "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
           "AssociatePublicIpAddress" : "true",
@@ -202,7 +203,7 @@
                           { "Fn::FindInMap" : [ "AWSInstanceType2Arch","t2.medium", "Arch" ] } ] },
         "InstanceType" : "t2.medium",
         "KeyName" : { "Ref" : "KeyName" },
-        "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Jenkins Master" } ],
+        "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Jenkins Operations Centre" } ],
         "NetworkInterfaces" : [{
           "GroupSet"                 : [{ "Ref" : "InstanceSecurityGroup" }],
           "AssociatePublicIpAddress" : "true",
