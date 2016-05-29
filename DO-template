@@ -187,7 +187,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "80" } 
+            "Ebs" : { "VolumeSize" : "80" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} } ],
@@ -212,7 +213,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "50" } 
+            "Ebs" : { "VolumeSize" : "50" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Jenkins Operations Centre" } ],
@@ -237,7 +239,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "50" } 
+            "Ebs" : { "VolumeSize" : "50" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Jenkins Master" } ],
@@ -262,7 +265,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "10" } 
+            "Ebs" : { "VolumeSize" : "10" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Jenkins Slave" } ],
@@ -288,7 +292,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "30" } 
+            "Ebs" : { "VolumeSize" : "30" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Selenium Server" } ],
@@ -313,7 +318,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "30" } 
+            "Ebs" : { "VolumeSize" : "30" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Puppet Enterprise" } ],
@@ -338,7 +344,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "30" } 
+            "Ebs" : { "VolumeSize" : "30" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Sonar" } ],
@@ -363,7 +370,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "30" } 
+            "Ebs" : { "VolumeSize" : "30" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Nexus Repository Manager" } ],
@@ -388,7 +396,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "30" } 
+            "Ebs" : { "VolumeSize" : "30" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Nexus IQ" } ],
@@ -413,7 +422,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "100" } 
+            "Ebs" : { "VolumeSize" : "100" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "ELK cluster" } ],
@@ -438,7 +448,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "10" } 
+            "Ebs" : { "VolumeSize" : "10" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Console" } ],
@@ -463,7 +474,8 @@
         "BlockDeviceMappings" : [
           {
             "DeviceName" : "/dev/sda1",
-            "Ebs" : { "VolumeSize" : "10" } 
+            "Ebs" : { "VolumeSize" : "10" },
+            "Tags" : [ {"Key" : "Name", "Value" : { "Ref" : "AWS::StackName"} } ]
           }
         ],
         "Tags" : [ {"Key" : "Application", "Value" : { "Ref" : "AWS::StackId"} }, {"Key" : "Name", "Value" : "Dashboard" } ],
